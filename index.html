@@ -16,13 +16,16 @@
 
   <div class="w-full max-w-3xl bg-[#1f1f23] rounded-2xl border border-zinc-800/80 p-6 sm:p-10 shadow-2xl">
     
+    <!-- Timer & Real-Time Clock Bar -->
     <div class="flex flex-wrap items-center justify-between gap-3 pb-5 mb-6 border-b border-zinc-800/80">
+      <!-- Real-Time Clock -->
       <div class="flex items-center gap-2 text-xs sm:text-sm text-zinc-400 bg-zinc-900/80 px-3.5 py-1.5 rounded-lg border border-zinc-800">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
         <span>เวลาปัจจุบัน:</span>
         <span id="currentClock" class="font-mono font-semibold text-zinc-200">--:--:--</span>
       </div>
 
+      <!-- 3-Hour Countdown Timer -->
       <div class="flex items-center gap-2 text-xs sm:text-sm bg-zinc-900/80 px-3.5 py-1.5 rounded-lg border border-zinc-800">
         <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -32,6 +35,7 @@
       </div>
     </div>
 
+    <!-- Top Header & Continuous Progress Bar -->
     <header class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
       <div class="w-full sm:w-1/2 bg-zinc-800/80 h-2 rounded-full overflow-hidden border border-zinc-700/40">
         <div id="smoothProgressBar" class="bg-blue-500 h-full transition-all duration-300 ease-out" style="width: 1%"></div>
@@ -48,9 +52,19 @@
       </div>
     </header>
 
+    <!-- Quiz Content Card -->
     <main id="quizContent">
-      <div class="mb-2 flex justify-between items-center">
-        <span id="questionNumber" class="text-sm font-semibold text-zinc-400 tracking-wider">Question 1</span>
+      <div class="mb-2 flex flex-wrap justify-between items-center gap-2">
+        <div class="flex items-center gap-2.5">
+          <span id="questionNumber" class="text-sm font-semibold text-zinc-400 tracking-wider">Question 1</span>
+          <!-- ปุ่มเปิดกระดานแผงเลือกข้อ -->
+          <button onclick="togglePaletteModal()" class="px-2.5 py-1 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/60 transition-colors flex items-center gap-1.5 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
+            <span>แผงข้อสอบ (1-100)</span>
+          </button>
+        </div>
         <span id="categoryBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded bg-zinc-800 text-blue-400 border border-zinc-700/50"></span>
       </div>
 
@@ -58,6 +72,7 @@
 
       <div id="optionsList" class="space-y-3.5 mb-6"></div>
 
+      <!-- Hint Accordion -->
       <div class="mb-8 pt-2">
         <button onclick="toggleHint()" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-200 transition-colors font-medium focus:outline-none">
           <span>Hint</span>
@@ -70,16 +85,22 @@
 
       <div id="explanationContainer" class="hidden mb-8 p-4 rounded-xl border text-sm leading-relaxed"></div>
 
-      <footer class="flex items-center justify-end gap-3 pt-4 border-t border-zinc-800/80">
-        <button id="prevBtn" onclick="handlePrev()" class="px-6 py-2.5 rounded-full bg-[#27272a] hover:bg-[#323236] text-zinc-300 text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-          Back
+      <footer class="flex items-center justify-between pt-4 border-t border-zinc-800/80">
+        <button onclick="togglePaletteModal()" class="text-xs text-zinc-400 hover:text-zinc-200 underline underline-offset-4 hidden sm:block">
+          ดูข้อที่ยังไม่ได้ตอบ
         </button>
-        <button id="nextBtn" onclick="handleNext()" class="px-7 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all shadow-lg shadow-blue-600/20">
-          Next
-        </button>
+        <div class="flex items-center gap-3 ml-auto">
+          <button id="prevBtn" onclick="handlePrev()" class="px-6 py-2.5 rounded-full bg-[#27272a] hover:bg-[#323236] text-zinc-300 text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+            Back
+          </button>
+          <button id="nextBtn" onclick="handleNext()" class="px-7 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all shadow-lg shadow-blue-600/20">
+            Next
+          </button>
+        </div>
       </footer>
     </main>
 
+    <!-- Final Result Screen -->
     <div id="resultScreen" class="hidden text-center py-8">
       <h3 class="text-2xl font-bold text-white mb-2">สรุปผลการทำแบบทดสอบวิชาที่ 03</h3>
       <p class="text-zinc-400 text-sm mb-6">กายภาพบำบัดในโรคและภาวะต่างๆ (Clinical Case Simulation)</p>
@@ -90,6 +111,30 @@
       </button>
     </div>
 
+  </div>
+
+  <!-- Question Palette Modal (แผงเลือกข้อสอบ 1-100) -->
+  <div id="paletteModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#1f1f23] border border-zinc-800 rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
+        <div>
+          <h3 class="text-base font-bold text-white">แผงเลือกข้อสอบ (1-100)</h3>
+          <p class="text-xs text-zinc-400 mt-0.5">คลิกที่หมายเลขเพื่อกระโดดไปทำข้อนั้นได้ทันที</p>
+        </div>
+        <button onclick="togglePaletteModal()" class="text-zinc-400 hover:text-white p-1 text-lg">✕</button>
+      </div>
+
+      <!-- สถานะสีประกอบคำอธิบาย -->
+      <div class="flex flex-wrap items-center gap-3 py-3 text-xs text-zinc-400 border-b border-zinc-800/80">
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-zinc-800 border border-zinc-700"></span> ยังไม่ตอบ</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-emerald-950/60 border border-emerald-500"></span> ถูกต้อง</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-rose-950/60 border border-rose-500"></span> ตอบผิด</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded ring-2 ring-amber-400 bg-zinc-800"></span> ข้อปัจจุบัน</span>
+      </div>
+
+      <!-- Grid แสดง 1-100 ปุ่ม -->
+      <div id="paletteGrid" class="grid grid-cols-5 sm:grid-cols-10 gap-2 overflow-y-auto py-4 pr-1"></div>
+    </div>
   </div>
 
   <script src="questions.js"></script>
@@ -121,6 +166,8 @@
     const resultScreen = document.getElementById('resultScreen');
     const currentClock = document.getElementById('currentClock');
     const countdownTimer = document.getElementById('countdownTimer');
+    const paletteModal = document.getElementById('paletteModal');
+    const paletteGrid = document.getElementById('paletteGrid');
 
     // --- ฟังก์ชันนาฬิกาเวลาจริง ---
     function updateClock() {
@@ -153,7 +200,6 @@
 
         countdownTimer.innerText = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 
-        // เตือนเมื่อเหลือน้อยกว่า 15 นาที (ตัวเลขเปลี่ยนเป็นสีแดงกระพริบ)
         if (remainingSeconds <= 15 * 60) {
           countdownTimer.className = "font-mono font-bold text-rose-500 tracking-wider text-sm sm:text-base animate-pulse";
         }
@@ -264,17 +310,63 @@
       }
     }
 
+    // --- อนุญาตให้กดข้ามข้อได้ทันที ไม่บล็อกด้วย alert ---
     function handleNext() {
-      if (userAnswers[currentIdx] === null) {
-        alert("กรุณาเลือกคำตอบก่อนทำข้อถัดไป");
-        return;
-      }
       if (currentIdx < quizData.length - 1) {
         currentIdx++;
         renderQuestion();
       } else {
+        // เมื่อถึงข้อสุดท้าย ตรวจสอบข้อที่ยังไม่ได้ทำก่อนส่ง
+        const unansweredCount = userAnswers.filter(a => a === null).length;
+        if (unansweredCount > 0) {
+          const confirmSubmit = confirm(`คุณยังมีข้อที่ยังไม่ได้ตอบอีก ${unansweredCount} ข้อ\nต้องการส่งข้อสอบและดูผลคะแนนเลยหรือไม่?`);
+          if (!confirmSubmit) return;
+        }
         showResults();
       }
+    }
+
+    // --- ฟังก์ชันกระโดดข้ามไปข้อที่เลือกโดยตรง ---
+    function jumpToQuestion(idx) {
+      if (idx >= 0 && idx < quizData.length) {
+        currentIdx = idx;
+        paletteModal.classList.add('hidden');
+        renderQuestion();
+      }
+    }
+
+    // --- เปิด/ปิด Modal แผงเลือกข้อสอบ ---
+    function togglePaletteModal() {
+      if (paletteModal.classList.contains('hidden')) {
+        renderPaletteGrid();
+        paletteModal.classList.remove('hidden');
+      } else {
+        paletteModal.classList.add('hidden');
+      }
+    }
+
+    function renderPaletteGrid() {
+      paletteGrid.innerHTML = '';
+      quizData.forEach((_, idx) => {
+        const btn = document.createElement('button');
+        btn.innerText = idx + 1;
+        btn.onclick = () => jumpToQuestion(idx);
+
+        let baseStyle = "h-9 w-full rounded-lg text-xs font-semibold flex items-center justify-center transition-all ";
+        
+        // กำหนดสีปุ่มตามสถานะการตอบ
+        if (idx === currentIdx) {
+          btn.className = baseStyle + "ring-2 ring-amber-400 bg-zinc-800 text-white font-bold";
+        } else if (userAnswers[idx] === null) {
+          btn.className = baseStyle + "bg-zinc-800/80 hover:bg-zinc-700 text-zinc-400 border border-zinc-700/60";
+        } else if (userAnswers[idx] === quizData[idx].correct) {
+          btn.className = baseStyle + "bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-300 border border-emerald-500/60";
+        } else {
+          btn.className = baseStyle + "bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 border border-rose-500/60";
+        }
+
+        paletteGrid.appendChild(btn);
+      });
     }
 
     function showResults() {

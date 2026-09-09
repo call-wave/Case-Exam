@@ -1,16 +1,16 @@
-const quizData = [
+﻿const quizData = [
   {
     category: "Pediatric PT",
-    question: "เด็กชายอายุ 5 ปี มารับการตรวจเนื่องจากหกล้มบ่อย ลุกจากพื้นลำบากโดยต้องใช้มือดันไต่ขึ้นตามขาทั้งสองข้างเพื่อพยุงตัวขึ้นยืน (Gowers' sign positive) และมีน่องทั้งสองข้างโตแต่เนื้อสัมผัสแน่นหยุ่น ผลตรวจทางห้องปฏิบัติการพบค่า Creatine Kinase (CK) สูงผิดปกติมาก ได้รับการวินิจฉัยเป็น Duchenne Muscular Dystrophy (DMD) รูปแบบการออกกำลังกายในข้อใดเป็นข้อห้ามเด็ดขาด (Absolute contraindication) สำหรับเด็กรายนี้?",
+    question: "เด็กชายอายุ 5 ปี มารับการตรวจเนื่องจากหกล้มบ่อย ลุกจากพื้นลำบากโดยต้องใช้มือดันไต่ขึ้นตามขาทั้งสองข้างเพื่อพยุงตัวขึ้นยืน (Gowers' sign positive) และมีน่องทั้งสองข้างโตจากภาวะ pseudohypertrophy ผลตรวจทางห้องปฏิบัติการพบค่า Creatine Kinase (CK) สูงผิดปกติมาก และได้รับการวินิจฉัยเป็น Duchenne Muscular Dystrophy (DMD) การออกกำลังกายรูปแบบใดควรหลีกเลี่ยงในเด็กรายนี้?",
     options: [
       "A. การออกกำลังกายแบบหดตัวขณะกล้ามเนื้อยาวออกที่มีแรงต้านสูง (High-resistance Eccentric exercise)",
-      "B. การออกกำลังกายแบบแอโรบิกในน้ำอุ่นที่ระดับความหนักต่ำ (Low-intensity aquatic exercise)",
-      "C. การปั่นจักรยานอยู่กับที่โดยใช้แรงต้านต่ำถึงปานกลาง (Submaximal cycling)",
-      "D. การออกกำลังกายแบบหดตัวขณะกล้ามเนื้อสั้นเข้าที่มีแรงต้านต่ำ (Low-resistance Concentric exercise)"
-    ],
-    correct: 0,
-    hint: "นึกถึงประเภทการหดตัวของกล้ามเนื้อที่ก่อให้เกิดความเค้นเชิงกลต่อเยื่อหุ้มเซลล์กล้ามเนื้อมากที่สุด",
-    explanation: "ในโรค DMD เยื่อหุ้มเซลล์กล้ามเนื้อ (Sarcolemma) ขาด Dystrophin ทำให้เปราะบาง การออกกำลังกายแบบ Eccentric contraction จะสร้างแรงเค้นเชิงกลสูงจนเยื่อหุ้มเซลล์ฉีกขาด นำไปสู่การสลายตัวของเส้นใยกล้ามเนื้อ (Muscle necrosis) และเร่งการดำเนินของโรค"
+      "B. การออกกำลังกายแบบแอโรบิกในน้ำที่ระดับความหนักต่ำ (Low-intensity aquatic exercise)",
+      "C. การปั่นจักรยานอยู่กับที่แบบ Submaximal โดยใช้แรงต้านต่ำ (Low-resistance submaximal cycling)",
+      "D. การออกกำลังกายแบบหดตัวขณะกล้ามเนื้อสั้นเข้าที่มีแรงต้านต่ำและระดับ Submaximal (Low-resistance submaximal Concentric exercise)"
+   ],
+   correct: 0,
+   hint: "พิจารณาประเภทของ muscle contraction ที่เพิ่มความเสี่ยงต่อ contraction-induced muscle injury ในกล้ามเนื้อที่ขาด dystrophin",
+   explanation: "Duchenne Muscular Dystrophy (DMD) เกิดจากการขาด dystrophin ซึ่งทำให้เส้นใยกล้ามเนื้อและ sarcolemma มีความเปราะบางต่อ contraction-induced muscle injury โดยเฉพาะระหว่าง eccentric contraction การออกกำลังกายแบบ high-resistance eccentric จึงเพิ่มความเสี่ยงต่อ muscle damage และควรหลีกเลี่ยงในผู้ป่วย DMD ขณะที่การออกกำลังกายแบบ submaximal aerobic เช่น swimming และ cycling สามารถใช้ได้โดยต้องหลีกเลี่ยงการออกแรงมากเกินไปและมีการพักอย่างเหมาะสม"
   },
   {
     category: "Musculoskeletal PT",
@@ -52,17 +52,17 @@ const quizData = [
     explanation: "Pusher syndrome มีปัญหาด้าน Graviceptive perception แต่ Visual upright perception ยังสมบูรณ์ การใช้แรงต้านจากภายนอกจะยิ่งกระตุ้นให้คนไข้ดันกลับ การใช้ Visual feedback ให้คนไข้สังเกตและปรับแนวดิ่งด้วยตนเองจึงเป็นวิธีที่มีประสิทธิภาพสูงสุด"
   },
   {
-    category: "Neurological PT",
-    question: "ผู้ป่วยบาดเจ็บไขสันหลังระดับ T4 (Complete SCI) ระหว่างฝึกยืนบน Tilt table มีอาการปวดศีรษะตุบๆ อย่างรุนแรง ใบหน้าแดง เหงื่อออกท่วมบริเวณเหนือบอบบาดเจ็บ ความดันโลหิตพุ่งสูง 190/110 mmHg ชีพจร 48 bpm ขั้นตอนแรกที่ต้องทำทันทีคืออะไร?",
-    options: [
+    "category": "Neurological PT",
+    "question": "ผู้ป่วยบาดเจ็บไขสันหลังระดับ T4 (Complete SCI) ระหว่างฝึกยืนบน Tilt table มีอาการปวดศีรษะตุบๆ อย่างรุนแรง ใบหน้าแดง เหงื่อออกท่วมบริเวณเหนือระดับบาดเจ็บ ความดันโลหิตพุ่งสูง 190/110 mmHg ชีพจร 48 bpm ขั้นตอนแรกที่ต้องทำทันทีคืออะไร?",
+    "options": [
       "A. ปรับเตียงให้ผู้ป่วยนอนราบยกขาสูงทันที",
       "B. จับผู้ป่วยลุกนั่งตัวตรง 90° ปลดเสื้อผ้าที่รัดแน่น และตรวจเช็กสายสวนปัสสาวะเพื่อหาจุดอุดตัน",
       "C. เริ่มทำ CPR ทันทีเนื่องจากภาวะ Bradycardia",
       "D. ให้ผู้ป่วยสูดหายใจลึกๆ และรอสังเกตอาการ 15 นาที"
     ],
-    correct: 1,
-    hint: "ภาวะ Autonomic Dysreflexia (AD) ซึ่งเป็นภาวะฉุกเฉินทางการแพทย์ในผู้ป่วยระดับ T6 ขึ้นไป",
-    explanation: "ในภาวะ Autonomic Dysreflexia ห้ามนอนราบเด็ดขาดเพราะจะทำให้ความดันในสมองยิ่งสูงขึ้น ต้องจัดให้อยู่ในท่านั่งตัวตรงเพื่ออาศัยแรงโน้มถ่วงลดความดัน (Orthostatic effect) และรีบกำจัดสิ่งกระตุ้น ซึ่งสาเหตุกว่า 80% เกิดจากการคั่งของน้ำปัสสาวะหรือสายสวนพับงอ"
+    "correct": 1,
+    "hint": "ภาวะ Autonomic Dysreflexia (AD) ซึ่งเป็นภาวะฉุกเฉินทางการแพทย์ในผู้ป่วยระดับ T6 ขึ้นไป",
+    "explanation": "ในภาวะ Autonomic Dysreflexia ห้ามนอนราบเด็ดขาดเพราะจะทำให้ความดันในสมองยิ่งสูงขึ้น ต้องจัดให้อยู่ในท่านั่งตัวตรงเพื่ออาศัยแรงโน้มถ่วงลดความดัน (Orthostatic effect) และรีบกำจัดสิ่งกระตุ้น ซึ่งสาเหตุกว่า 80% เกิดจากการคั่งของน้ำปัสสาวะหรือสายสวนพับงอ"
   },
   {
     category: "Neurological PT",
@@ -79,7 +79,7 @@ const quizData = [
   },
   {
     category: "Musculoskeletal PT",
-    question: "ผู้ป่วยหลังผ่าตัดเปลี่ยนข้อสะโพกเทียม (Total Hip Arthroplasty) โดยใช้ Posterior approach ท่าทางหรือการเคลื่อนไหวในข้อใดต้องหลีกเลี่ยงอย่างเด็ดขาดเพื่อป้องกันข้อสะโพกหลุด?",
+    question: "ผู้ป่วยหลังผ่าตัดเปลี่ยนข้อสะโพกเทียม (Total Hip Arthroplasty) โดยใช้ Posterior approach ตามข้อควรระวังแบบดั้งเดิม ท่าทางหรือการเคลื่อนไหวในข้อใดควรหลีกเลี่ยงเพื่อป้องกันข้อสะโพกหลุด?",
     options: [
       "A. งอสะโพกเกิน 90°, หุบสะโพกข้ามแนวกึ่งกลางลำตัว, และหมุนสะโพกเข้าด้านใน (Internal rotation)",
       "B. เหยียดสะโพกไปด้านหลัง, กางสะโพกออกด้านนอก, และหมุนสะโพกออกด้านนอก (External rotation)",
@@ -87,8 +87,8 @@ const quizData = [
       "D. นั่งบนเก้าอี้สูงที่มีระดับเบาะสูงกว่าระดับข้อเข่า"
     ],
     correct: 0,
-    hint: "Posterior approach มีการเปิดผ่าแคปซูลข้อสะโพกด้านหลัง ท่าที่ดันหัวกระดูกต้นขาไปด้านหลังคือข้อห้าม",
-    explanation: "Posterior approach ทำให้โครงสร้างด้านหลังข้อสะโพกหย่อนตัวและอ่อนแอ จึงห้ามทำท่า Hip Flexion > 90°, Adduction ข้ามกึ่งกลาง และ Internal rotation เพราะจะดันหัวกระดูก Femoral head หลุดออกทางด้านหลังของเบ้าสะโพก"
+    hint: "Posterior approach traditionally requires caution with combined hip flexion, adduction, and internal rotation.",
+    explanation: "หลังผ่าตัด THA แบบ Posterior approach ผู้ป่วยอาจได้รับคำแนะนำให้หลีกเลี่ยงการเคลื่อนไหวร่วมกันของ hip flexion, adduction และ internal rotation โดยเฉพาะในช่วงแรกหลังผ่าตัด เพื่อลดความเสี่ยงต่อ posterior dislocation ทั้งนี้ข้อควรระวังควรปรับตามคำสั่งของศัลยแพทย์และความมั่นคงของข้อสะโพก"
   },
   {
     category: "Cardiopulmonary PT",
@@ -144,29 +144,29 @@ const quizData = [
   },
   {
     category: "Musculoskeletal PT",
-    question: "ผู้ป่วยชายอายุ 45 ปี ปวดคอร้าวลงสะบักและแขนขวาด้านข้างจนถึงนิ้วหัวแม่มือ ตรวจพบ Biceps reflex ลดลง (1+) และ Spurling's test ให้ผลบวก หากต้องการรักษาด้วยเครื่องดึงคอ (Mechanical Cervical Traction) ควรจัดคอมุมใดและใช้น้ำหนักเริ่มต้นเท่าใดจึงจะเหมาะสมและปลอดภัย?",
+    question: "ผู้ป่วยชายอายุ 45 ปี ปวดคอร้าวลงสะบักและแขนขวาด้านข้างจนถึงนิ้วหัวแม่มือ ตรวจพบ Biceps reflex ลดลง (1+) และ Spurling's test ให้ผลบวก หากต้องการรักษาด้วยเครื่องดึงคอ (Mechanical Cervical Traction) ควรจัดคอในลักษณะใดจึงจะเหมาะสมและปลอดภัย?",
     options: [
-      "A. ดึงที่มุม Full Extension น้ำหนัก 30% ของน้ำหนักตัว",
-      "B. ดึงที่มุม Cervical Flexion ประมาณ 24°-30° ด้วยแรงดึงเริ่มต้น 10-15 ปอนด์ (หรือประมาณ 7-10% ของน้ำหนักตัว)",
-      "C. ดึงที่มุม Lateral flexion ไปด้านที่มีอาการ น้ำหนัก 25 กิโลกรัม",
-      "D. ดึงที่มุม Neutral 0° น้ำหนัก 50% ของน้ำหนักตัว"
+      "A. ดึงที่มุม Full Extension ด้วยแรงดึงสูง",
+      "B. ดึงโดยจัดคอให้อยู่ใน Cervical flexion ประมาณ 20°–30° และเริ่มด้วยแรงดึงระดับต่ำ ปรับตามอาการและการตอบสนองของผู้ป่วย",
+      "C. ดึงที่มุม Lateral flexion ไปด้านที่มีอาการด้วยแรงดึงสูง",
+      "D. ดึงที่มุม Neutral 0° ด้วยแรงดึง 50% ของน้ำหนักตัว"
     ],
     correct: 1,
-    hint: "อาการปวดร้าวตามรากประสาท C6 การเปิดช่อง Intervertebral foramen ระดับคอส่วนล่างต้องการมุมก้มที่พอเหมาะ",
-    explanation: "การเปิดช่อง Intervertebral foramen ระดับ C5-C7 ต้องจัดคอมุม Flexion ราว 24°-30° และแรงดึงเริ่มต้นเพื่อความปลอดภัยควรอยู่ที่ 10-15 ปอนด์ แล้วจึงค่อยๆ ปรับเพิ่มขึ้น แต่ไม่ควรเกิน 20-25 ปอนด์ในระยะแรกเพื่อป้องกันกล้ามเนื้อหดเกร็งต้าน"
+    hint: "พิจารณาตำแหน่งของคอที่เหมาะสมต่อการเพิ่ม intervertebral foraminal space และควบคุมแรงดึงตามการตอบสนองของผู้ป่วย",
+    explanation: "Mechanical cervical traction มักจัดคอให้อยู่ใน flexion เล็กน้อยถึงปานกลางเพื่อช่วยลดแรงกดต่อโครงสร้างบริเวณ cervical spine โดยควรเริ่มจากแรงดึงระดับต่ำและปรับตามอาการ ผลการตรวจ และความทนต่อการรักษาของผู้ป่วย ไม่ควรกำหนดแรงดึงเป็นเปอร์เซ็นต์น้ำหนักตัวตายตัวสำหรับผู้ป่วยทุกราย"
   },
   {
     category: "Musculoskeletal PT",
-    question: "ผู้ป่วยชายอายุ 28 ปี ได้รับการวินิจฉัยว่าเป็น Ankylosing Spondylitis (AS) มีอาการปวดและข้อยึดติดบริเวณกระดูกสันหลังและข้อกระดูกเชิงกรานช่วงเช้า การจัดโปรแกรมกายภาพบำบัดข้อใดเป็นข้อห้ามหรือไม่เหมาะสมสำหรับผู้ป่วยรายนี้?",
+    question: "ผู้ป่วยชายอายุ 28 ปี ได้รับการวินิจฉัยว่าเป็น Ankylosing Spondylitis (AS) มีอาการปวดและข้อยึดติดบริเวณกระดูกสันหลังและข้อกระดูกเชิงกรานช่วงเช้า การจัดโปรแกรมกายภาพบำบัดข้อใดควรหลีกเลี่ยง โดยเฉพาะในผู้ป่วยที่มี spinal stiffness หรือ osteoporosis ร่วมด้วย?",
     options: [
       "A. การฝึกการขยายตัวของทรวงอก (Chest expansion) และ Diaphragmatic breathing",
       "B. การฝึกยืดกล้ามเนื้อและการเคลื่อนไหวในทิศทาง Spinal extension",
       "C. การออกกำลังกายว่ายน้ำท่ากรรเชียง (Backstroke)",
-      "D. การเน้นออกกำลังกายท่า Spinal flexion ซ้ำๆ เช่น การซิทอัพ (Sit-ups) และงอเข่าชิดอกแรงๆ"
+      "D. การออกกำลังกายที่มีการก้มและบิดกระดูกสันหลังซ้ำๆ โดยเฉพาะในช่วงปลายองศาหรือมีแรงต้าน (Loaded spinal flexion and rotation)"
     ],
     correct: 3,
-    hint: "พยาธิสภาพของโรค AS นำไปสู่ภาวะกระดูกสันหลังเชื่อมติดในท่าก้มโก่ง (Kyphosis)",
-    explanation: "ผู้ป่วย AS มีแนวโน้มเกิดข้อกระดูกสันหลังเชื่อมติดและกระดูกพรุนร่วมด้วย ท่าทางที่ผิดปกติคือ Thoracic kyphosis และ Forward head การบริหารท่า Flexion ซ้ำๆ จะยิ่งส่งเสริมให้กระดูกสันหลังค่อมผิดรูปถาวร และเพิ่มแรงเฉือนต่อกระดูกสันหลังที่เปราะ เสี่ยงต่อการเกิด Fracture"
+    hint: "พิจารณาการเคลื่อนไหวที่เพิ่มแรงต่อกระดูกสันหลังที่แข็งและอาจมีความเปราะบาง โดยเฉพาะการก้มและหมุนร่วมกัน",
+    explanation: "ในผู้ป่วย Ankylosing Spondylitis ควรส่งเสริมท่าทางตัวตรง การเคลื่อนไหวของกระดูกสันหลัง และการขยายทรวงอก แต่ควรระมัดระวังการก้มและหมุนกระดูกสันหลังซ้ำๆ โดยเฉพาะในผู้ที่มี spinal stiffness หรือ osteoporosis เนื่องจากอาจเพิ่ม mechanical stress และความเสี่ยงต่อการบาดเจ็บของกระดูกสันหลัง"
   },
   {
     category: "Geriatric PT",
@@ -299,17 +299,17 @@ const quizData = [
     explanation: "ในภาวะ Spondylolisthesis ท่าแอ่นหลัง (Hyperextension) จะเพิ่ม Anterior shear force ผลักให้กระดูก L5 เลื่อนไปข้างหน้าบน S1 มากขึ้น และบีบอัด Posterior elements จึงห้ามทำท่าแอ่นหลังสุดองศา โดยควรเน้น Flexion bias และ Core stability แทน"
   },
   {
-    category: "Pediatric PT",
-    question: "เด็กหญิงอายุ 7 ขวบ ได้รับการวินิจฉัยว่าเป็น Spastic Diplegia Cerebral Palsy เดินในลักษณะ Crouch gait pattern (ข้อสะโพกงอ, ข้อเข่างอ, ข้อเท้ากระดกตก) กล้ามเนื้อคู่ใดมักพบการตึงตัวหดสั้น (Tightness / Contracture) ที่เป็นสาเหตุหลักของท่าเดินนี้?",
-    options: [
+    "category": "Pediatric PT",
+    "question": "เด็กหญิงอายุ 7 ขวบ ได้รับการวินิจฉัยว่าเป็น Spastic Diplegia Cerebral Palsy เดินในลักษณะ Crouch gait pattern (ข้อสะโพกงอ, ข้อเข่างอ, ข้อเท้ากระดกขึ้นมากเกินไป: Excessive dorsiflexion) กล้ามเนื้อคู่ใดมักพบการตึงตัวหดสั้น (Tightness / Contracture) ที่เป็นสาเหตุหลักของท่าเดินนี้?",
+    "options": [
       "A. Iliopsoas และ Hamstrings",
       "B. Gluteus maximus และ Quadriceps",
       "C. Tibialis anterior และ Peroneus longus",
       "D. Erector spinae และ Abdominal muscles"
     ],
-    correct: 0,
-    hint: "กล้ามเนื้องอสะโพกและกล้ามเนื้องอเข่าที่มีแรงตึงตัวสูงตลอดวงจรการเดิน",
-    explanation: "Crouch gait ในเด็ก CP มีลักษณะเด่นคือ Excessive hip flexion และ Knee flexion ตลอด Stance phase มีสาเหตุหลักจากความตึงตัวหดสั้นของกล้ามเนื้องอสะโพก (Iliopsoas) ร่วมกับกล้ามเนื้องอเข่า (Hamstrings) ควบคู่กับความอ่อนแรงของ Gluteus maximus และ Quadriceps"
+    "correct": 0,
+    "hint": "กล้ามเนื้องอสะโพกและกล้ามเนื้องอเข่าที่มีแรงตึงตัวสูงตลอดวงจรการเดิน",
+    "explanation": "Crouch gait ในเด็ก CP มีลักษณะเด่นคือ Excessive hip flexion และ Knee flexion ตลอด Stance phase มีสาเหตุหลักจากความตึงตัวหดสั้นของกล้ามเนื้องอสะโพก (Iliopsoas) ร่วมกับกล้ามเนื้องอเข่า (Hamstrings) ควบคู่กับความอ่อนแรงของ Gluteus maximus และ Quadriceps"
   },
   {
     category: "Cardiopulmonary PT",
@@ -416,30 +416,30 @@ const quizData = [
     explanation: "Iliotibial Band Syndrome (ITBS) พบบ่อยในนักวิ่ง เกิดจากการเสียดสีของแถบ ITB กับ Lateral femoral condyle ในช่วงมุมเข่างอ 30° การตรวจพิเศษเฉพาะคือ Ober's test (ประเมินความตึงตัวของ TFL/ITB) และ Noble compression test"
   },
   {
-    category: "Musculoskeletal PT",
-    question: "ผู้ป่วยชายอายุ 52 ปี ปวดคอร้าวลงสะบักและแขน ขาสองข้างตึงเกร็ง ก้าวเดินไม่มั่นคงเหมือนเดินบนปุยเมฆ ตรวจพบ Positive Hoffmann's sign, Inverted supinator reflex และ Sustained ankle clonus ข้อห้ามเด็ดขาด (Absolute contraindication) สำหรับผู้ป่วยรายนี้คืออะไร?",
-    options: [
+    "category": "Musculoskeletal PT",
+    "question": "ผู้ป่วยชายอายุ 52 ปี ปวดคอร้าวลงสะบักและแขน ขาสองข้างตึงเกร็ง ก้าวเดินไม่มั่นคงเหมือนเดินบนปุยเมฆ ตรวจพบ Positive Hoffmann's sign, Inverted supinator reflex และ Sustained ankle clonus ข้อห้ามเด็ดขาด (Absolute contraindication) สำหรับผู้ป่วยรายนี้คืออะไร?",
+    "options": [
       "A. การฝึกการทรงตัวในท่ายืน (Balance training)",
-      "B. การดัดดัดกระดูกสันหลังระดับคอด้วยความเร็วสูง (High-Velocity Cervical Manipulation)",
+      "B. การดัดกระดูกสันหลังระดับคอด้วยความเร็วสูง (High-Velocity Cervical Manipulation)",
       "C. การบริหารการหายใจแบบ Deep breathing",
       "D. การฝึกกระตุ้นกล้ามเนื้อปลายแขนด้วยกระแสไฟฟ้าบำบัดชนิด TENS"
     ],
-    correct: 1,
-    hint: "ผู้ป่วยมีอาการของ Cervical Spondylotic Myelopathy (การกดทับไขสันหลังระดับคอ บ่งชี้จาก UMN signs)",
-    explanation: "การตรวจพบ Hoffmann's sign, Inverted supinator และ Clonus เป็นอาการของ UMN lesion จากภาวะ Cervical Myelopathy การทำ High-velocity spinal manipulation ที่บริเวณคอเป็นข้อห้ามเด็ดขาดอย่างยิ่ง เพราะอาจทำให้ไขสันหลังเสียหายเฉียบพลันจนเป็นอัมพาตทั้งตัว (Tetraplegia)"
+    "correct": 1,
+    "hint": "ผู้ป่วยมีอาการของ Cervical Spondylotic Myelopathy (การกดทับไขสันหลังระดับคอ บ่งชี้จาก UMN signs)",
+    "explanation": "การตรวจพบ Hoffmann's sign, Inverted supinator และ Clonus เป็นอาการของ UMN lesion จากภาวะ Cervical Myelopathy การทำ High-velocity spinal manipulation ที่บริเวณคอเป็นข้อห้ามเด็ดขาดอย่างยิ่ง เพราะอาจทำให้ไขสันหลังเสียหายเฉียบพลันจนเป็นอัมพาตทั้งตัว (Tetraplegia)"
   },
   {
-    category: "Musculoskeletal PT",
-    question: "ผู้ป่วยชายอายุ 30 ปี ล้มกระแทกพื้นในท่าข้อเท้าพลิกเข้าด้านในอย่างรุนแรง (Inversion injury) กดเจ็บชัดเจนที่บริเวณ Anterior Talofibular Ligament (ATFL) ตรวจ Anterior Drawer Test ของข้อเท้าพบ Laxity ชัดเจน การฝึกฟื้นฟูกล้ามเนื้อกลุ่มใดมีความสำคัญสูงสุดในการป้องกันข้อเท้าพลิกซ้ำเรื้อรัง (Chronic Ankle Instability)?",
-    options: [
+    "category": "Musculoskeletal PT",
+    "question": "ผู้ป่วยชายอายุ 30 ปี ล้มกระแทกพื้นในท่าข้อเท้าพลิกเข้าด้านในอย่างรุนแรง (Inversion injury) กดเจ็บชัดเจนที่บริเวณ Anterior Talofibular Ligament (ATFL) ตรวจ Anterior Drawer Test ของข้อเท้าพบ Laxity ชัดเจน การฝึกฟื้นฟูกล้ามเนื้อกลุ่มใดมีความสำคัญสูงสุดในการป้องกันข้อเท้าพลิกซ้ำเรื้อรัง (Chronic Ankle Instability)?",
+    "options": [
       "A. กล้ามเนื้อ Tibialis anterior และ Extensor hallucis longus",
       "B. กล้ามเนื้อ Fibularis (Peroneus) longus และ brevis ร่วมกับการฝึก Proprioception",
       "C. กล้ามเนื้อ Gastrocnemius และ Soleus",
       "D. กล้ามเนื้อ Flexor digitorum longus และ Tibialis posterior"
     ],
-    correct: 1,
-    hint: "กลุ่มกล้ามเนื้อด้านข้างของขาหนีบทำหน้าที่ Eversion เพื่อต้านแรงบิดหมุนเข้าด้านใน (Inversion)",
-    explanation: "กล้ามเนื้อ Peroneus (Fibularis) longus และ brevis เป็น Dynamic stabilizer หลักในการต้านการบิด Inversion ของข้อเท้า การฝึกเสริมความแข็งแรงของกลุ่มนี้ร่วมกับการฝึกประสาทรับรู้ข้อต่อ (Proprioceptive / Neuromuscular control training) จำเป็นอย่างยิ่งในการป้องกันภาวะข้อเท้าหลวมเรื้อรัง"
+    "correct": 1,
+    "hint": "กลุ่มกล้ามเนื้อบริเวณด้านนอกของขาท่อนล่างทำหน้าที่ Eversion เพื่อต้านแรงบิดหมุนเข้าด้านใน (Inversion)",
+    "explanation": "กล้ามเนื้อ Peroneus (Fibularis) longus และ brevis เป็น Dynamic stabilizer หลักในการต้านการบิด Inversion ของข้อเท้า การฝึกเสริมความแข็งแรงของกลุ่มนี้ร่วมกับการฝึกประสาทรับรู้ข้อต่อ (Proprioceptive / Neuromuscular control training) จำเป็นอย่างยิ่งในการป้องกันภาวะข้อเท้าหลวมเรื้อรัง"
   },
   {
     category: "Musculoskeletal PT",
@@ -650,17 +650,17 @@ const quizData = [
     explanation: "การบาดเจ็บของ Meniscus (โดยเฉพาะ Bucket-handle tear) มักเกิดจากแรงบิดหมุนขณะงอเข่า ทำให้ชิ้นส่วนหมอนรองข้อที่ฉีกขาดไปขัดขวางการเหยียดข้อเข่า เกิดภาวะ True locking ร่วมกับมีอาการกดเจ็บตามแนว Joint line และ McMurray's test ให้ผลบวก"
   },
   {
-    category: "Musculoskeletal PT",
-    question: "ผู้ป่วยหลังผ่าตัดเย็บซ่อมเส้นเอ็น Supraspinatus ฉีกขาดขาดขนาดใหญ่ (Rotator Cuff Repair) สัปดาห์ที่ 2 อยู่ในช่วง Maximum Protection Phase การรักษาทางกายภาพบำบัดข้อใดเป็นข้อห้ามเด็ดขาด (Contraindication)?",
-    options: [
+    "category": "Musculoskeletal PT",
+    "question": "ผู้ป่วยหลังผ่าตัดเย็บซ่อมเส้นเอ็น Supraspinatus ฉีกขาดขนาดใหญ่ (Rotator Cuff Repair) สัปดาห์ที่ 2 อยู่ในช่วง Maximum Protection Phase การรักษาทางกายภาพบำบัดข้อใดเป็นข้อห้ามเด็ดขาด (Contraindication)?",
+    "options": [
       "A. การเคลื่อนไหวข้อไหล่แบบ Passive ROM ในแนวระนาบ Scapular plane",
       "B. การฝึกเกร็งกล้ามเนื้อไหล่แบบ Active-assisted ROM และ Active elevation ทันที",
       "C. การบริหารขยับข้อมือและกำมือเบาๆ (Wrist & Hand active pump)",
       "D. การใส่ Abduction sling เพื่อพยุงข้อไหล่ตามแพทย์สั่ง"
     ],
-    correct: 1,
-    hint: "ระยะแรกต้องปกป้องรอยเย็บเอ็นจากการถูกกระตุกดึง ห้ามให้กล้ามเนื้อ Supraspinatus ออกแรงหดตัวด้วยตนเอง",
-    explanation: "ในช่วง 0-4 ถึง 6 สัปดาห์แรกหลังผ่าตัด Rotator Cuff Repair เส้นเอ็นที่เย็บซ่อมเข้ากับกระดูกยังไม่ติดแน่น การออกกำลังกายแบบ Active หรือ Active-assisted elevation ของข้อไหล่เป็นข้อห้ามเด็ดขาดเพราะทำให้เกิดแรงดึงรั้งจนรอยเย็บขาดซ้ำ อนุญาตให้ทำได้เฉพาะ Passive ROM ภายใต้ขอบเขตที่ปลอดภัยเท่านั้น"
+    "correct": 1,
+    "hint": "ระยะแรกต้องปกป้องรอยเย็บเอ็นจากการถูกกระตุกดึง ห้ามให้กล้ามเนื้อ Supraspinatus ออกแรงหดตัวด้วยตนเอง",
+    "explanation": "ในช่วง 0-4 ถึง 6 สัปดาห์แรกหลังผ่าตัด Rotator Cuff Repair เส้นเอ็นที่เย็บซ่อมเข้ากับกระดูกยังไม่ติดแน่น การออกกำลังกายแบบ Active หรือ Active-assisted elevation ของข้อไหล่เป็นข้อห้ามเด็ดขาดเพราะทำให้เกิดแรงดึงรั้งจนรอยเย็บขาดซ้ำ อนุญาตให้ทำได้เฉพาะ Passive ROM ภายใต้ขอบเขตที่ปลอดภัยเท่านั้น"
   },
   {
     category: "Neurological PT",
@@ -1287,16 +1287,16 @@ const quizData = [
     explanation: "อาการปวดหลังที่ไม่ทุเลาลงเมื่อนอนพัก, ปวดตื่นกลางคืน (Night pain), มีไข้ต่ำ, น้ำหนักลดโดยไม่ทราบสาเหตุ และมีประวัติโรคมะเร็ง เป็นสัญญาณเตือนอันตรายร้ายแรง (Red flags) ขั้นวิกฤตของโรคมะเร็งแพร่กระจายสู่กระดูกสันหลัง (Spinal Metastasis) นักกายภาพบำบัดต้องไม่ให้การรักษาทางกายภาพบำบัดใดๆ และต้องส่งตัวผู้ป่วยพบแพทย์ทันทีเพื่อความปลอดภัยในชีวิต"
   },
   {
-    category: "Pediatric PT",
-    question: "เด็กชายอายุ 10 เดือน ยังไม่สามารถพลิกคว่ำหรือทรงตัวนั่งได้ กล้ามเนื้อทั่วตัวมีลักษณะปวกเปียกป้ำ ปล่อยมือแล้วแขนขาตกลงบนเตียงทันที (Floppy infant / Generalized hypotonia) ไม่พบ Deep tendon reflexes และตรวจพบลิ้นสั่นระริก (Tongue fasciculation) ข้อใดคือโรคที่น่าสงสัยมากที่สุด?",
-    options: [
+    "category": "Pediatric PT",
+    "question": "เด็กชายอายุ 10 เดือน ยังไม่สามารถพลิกคว่ำหรือทรงตัวนั่งได้ กล้ามเนื้อทั่วตัวมีลักษณะปวกเปียก ปล่อยมือแล้วแขนขาตกลงบนเตียงทันที (Floppy infant / Generalized hypotonia) ไม่พบ Deep tendon reflexes และตรวจพบลิ้นสั่นระริก (Tongue fasciculation) ข้อใดคือโรคที่น่าสงสัยมากที่สุด?",
+    "options": [
       "A. Spinal Muscular Atrophy (SMA Type 1 หรือ Type 2)",
       "B. Spastic Quadriplegia Cerebral Palsy",
       "C. Duchenne Muscular Dystrophy",
       "D. Down Syndrome"
     ],
-    correct: 0,
-    hint: "โรคทางพันธุกรรมที่มีการเสื่อมสลายของ Anterior horn cells ในไขสันหลังและก้านสมอง",
-    explanation: "ภาวะทารกตัวอ่อนปวกเปียก (Floppy infant) ร่วมกับสูญเสียรีเฟล็กซ์ (Areflexia) และมี Tongue fasciculation เป็นลักษณะเฉพาะทางคลินิกของการเสื่อมสลายของ Lower Motor Neuron จากโรค Spinal Muscular Atrophy (SMA) แตกต่างจาก Cerebral Palsy ที่มักจะมี Hyperreflexia หรือ Duchenne ที่อาการอ่อนแรงมักเริ่มแสดงอาการชัดเจนหลังอายุ 2-3 ปีขึ้นไป"
+    "correct": 0,
+    "hint": "โรคทางพันธุกรรมที่มีการเสื่อมสลายของ Anterior horn cells ในไขสันหลังและก้านสมอง",
+    "explanation": "ภาวะทารกตัวอ่อนปวกเปียก (Floppy infant) ร่วมกับสูญเสียรีเฟล็กซ์ (Areflexia) และมี Tongue fasciculation เป็นลักษณะเฉพาะทางคลินิกของการเสื่อมสลายของ Lower Motor Neuron จากโรค Spinal Muscular Atrophy (SMA) แตกต่างจาก Cerebral Palsy ที่มักจะมี Hyperreflexia หรือ Duchenne ที่อาการอ่อนแรงมักเริ่มแสดงอาการชัดเจนหลังอายุ 2-3 ปีขึ้นไป"
   }
 ];
